@@ -1,4 +1,4 @@
-package endpoints
+package Handler_Functions
  
 import "net/http"
 
