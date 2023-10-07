@@ -8,6 +8,11 @@ import (
 )
 
 func BalanceHandler(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, types.PayerBalances)
+	if len(types.PayerBalances) == 0 {
+		c.JSON(http.StatusNotFound, gin.H{"error": "No Balances found"})
+	} else {
+		c.IndentedJSON(http.StatusOK, types.PayerBalances)
+
+	}
 
 }
