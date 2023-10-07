@@ -1,3 +1,3 @@
-module rest-api-mod
+module Fetch_API
 
 go 1.21.1
