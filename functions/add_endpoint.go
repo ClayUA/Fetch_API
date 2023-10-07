@@ -10,21 +10,23 @@ import (
 
 func AddHandler(c *gin.Context) {
 
+	types.PayerMutex.Lock()
+	defer types.PayerMutex.Unlock()
+
 	var RequestData types.Transaction
 	err := c.BindJSON(&RequestData)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-	fmt.Println(RequestData.Payer)
-	fmt.Println(RequestData.Points)
-	fmt.Println(RequestData.Timestamp)
 
 	err = validateJSON(RequestData)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, err.Error())
 		return
 	}
+	types.TransactionHistory = append(types.TransactionHistory, RequestData)
+	types.PayerBalances[RequestData.Payer] += RequestData.Points
 }
 
 func validateJSON(t types.Transaction) error {
