@@ -5,13 +5,22 @@ import (
 	"errors"
 	"net/http"
 	"sort"
+	"sync"
 
 	"github.com/gin-gonic/gin"
 )
 
 func SpendHandler(c *gin.Context) {
+	var Mutex sync.Mutex
+	//using a lock when operating on data
+	Mutex.Lock()
+	defer Mutex.Unlock()
+
+	// creating a single variable struct to read in point intergers from json to int
 	var SpendAmount types.SpendRequest
 
+	// decoding json and applying it to our Struct
+	// if the format is not correct it will return a bad request error 400
 	err := c.BindJSON(&SpendAmount)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, err.Error())

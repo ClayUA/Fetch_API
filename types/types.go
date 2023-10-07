@@ -20,7 +20,6 @@ var TransactionHistory []Transaction
 // this is for quick retrieval when we have a GET requst
 
 var PayerBalances = make(map[string]int)
-var PayerMutex sync.Mutex
 
 var TotalPointsBalance int
 var PointsBalanceMutex sync.Mutex

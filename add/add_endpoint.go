@@ -4,16 +4,17 @@ import (
 	"Fetch_API/types"
 	"fmt"
 	"net/http"
+	"sync"
 	"time"
 
 	"github.com/gin-gonic/gin"
 )
 
 func AddHandler(c *gin.Context) {
-
+	var Mutex sync.Mutex
 	//we are dealing with global variables so im going to use a lock just be sure we don't mess up any data transfers
-	types.PayerMutex.Lock()
-	defer types.PayerMutex.Unlock()
+	Mutex.Lock()
+	defer Mutex.Unlock()
 
 	var RequestData types.Transaction
 	err := c.BindJSON(&RequestData)
