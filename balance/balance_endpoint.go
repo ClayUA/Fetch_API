@@ -1,4 +1,4 @@
-package functions
+package balance
 
 import (
 	"Fetch_API/types"

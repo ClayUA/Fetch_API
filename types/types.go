@@ -1,11 +1,15 @@
 package types
 
-import "sync"
+import (
+	"sync"
+	"time"
+)
 
 type Transaction struct {
-	Points    int    `json:"points"`
-	Payer     string `json:"payer"`
-	Timestamp string `json:"timestamp"`
+	Points     int    `json:"points"`
+	Payer      string `json:"payer"`
+	Timestamp  string `json:"timestamp"`
+	ParsedTime time.Time
 }
 
 // slice to keep track of every transaction for this users transaction history
@@ -17,3 +21,10 @@ var TransactionHistory []Transaction
 
 var PayerBalances = make(map[string]int)
 var PayerMutex sync.Mutex
+
+var TotalPointsBalance int
+var PointsBalanceMutex sync.Mutex
+
+type SpendRequest struct {
+	Points int `json:"points"`
+}
