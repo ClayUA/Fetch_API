@@ -26,7 +26,7 @@ func SpendHandler(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, err.Error())
 		return
 	}
-	//using out TotalPointsBalance to see if we have enough points stored to complete the transaction
+	//using our TotalPointsBalance to see if we have enough points stored to complete the transaction
 	flag := ValidatePoints(SpendAmount)
 	if flag != nil {
 		c.JSON(http.StatusBadRequest, "User does not have enough points for Reqeust")

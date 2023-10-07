@@ -1,2 +1,5 @@
-# Fetch_API
-An API developed for the Fetch Rewards take home assignment for back end Engineer Intern
+
+
+# Fetch API Intern Project 
+
+Hello my name is Clay Truelove from the University of Alabama

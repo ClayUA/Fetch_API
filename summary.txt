@@ -1,0 +1,41 @@
+Part 2 Questions
+
+1. Why did you choose the tools, libraries, and language you used for the coding exercise?
+
+    I wanted to learn Golang before this project so I figured this would be a great way to learn the syntax.
+It is very similar to C++ which I have used before so that was quite easy to pickup. I used Go because it seems to be a very popular
+language for back end developement and it runs very quickly compared to a language like Python.
+After browsing some of the libraries I can see why people use it so much. The framework Gin made my life extremely easy for decoding
+and encodiing json. Gin also has very easy functions to set up a router and handle endpoints as you can see my main file is very simple.
+
+
+
+
+
+2. What are the advantages and disadvantages of your solution?
+
+    I opted to use local data structures for this less intense project to store data. In a production environment a database would certainly
+be used but was not necessary for this solution. An advantage of using an array of transaction structs is that it is very simple
+because it is easy to append a struct to the slice after decoding the json, validating, and storing it. This is advantagous for a few reasons.
+It does not require another user to download extra dependicies like MongoDB to run it. It is not a lightningn fast solution, but for it works well 
+with the little amount of data we use
+   
+    Using an array for this project had many disadvantages as well. Firstly, I have to use a sort function everytime the /spend endpoint is called
+because placing things inside of an array is really annoying. Using something like a linked list would allow us to sort ourtransactions as we add them.
+The array also is not persistant so the data is only around as you run the program. A database would keep the data after the program is terminated.
+
+I decided to use a map to store my reciept data after a /spend endpoint. This means I can find and display how much each payer spent in O(1).
+The problem with my implementation is that the map is a local variable and does not store the payer receipts. I was a bit concerned using too many 
+global variables so I played it safe.
+
+
+
+
+3. What has been a favorite school/personal project thus far? What about it that challenged you?
+
+I think the most challenging project I've participated in was creating my own Red/Black tree in my data structures and algorithms class.
+It was during my sophomore year and I was just getting oriented with object oriented programming. We had to create a number of functions aside from
+the typical insert and delete. I had hundreds of lines of pointers and I felt like I was beating my head against a wall trying to figure out how to
+make a copy constructor for such a monstrosity. I eventually broke through the mental wall and started to understand why I had to return node pointers
+in certain functions. It was very early in my programming career, but I don't think I hav ever learned that much in that span of time. I'm still a C++
+novice but that project and class certainly helped me learn a lot.
