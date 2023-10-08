@@ -9,6 +9,11 @@
 Hello my name is Clay Truelove from the University of Alabama and I made this application as a part
 of the take home assignment from Fetch Rewards
 
+## go.mod and go.sum
+These two files have any dependencies that you will need. If you do not have the proper packages or dependencies you can go to the root directory
+and use ```bash go mod download``` this should install everything you need to properly run this project
+<br>
+
 ## Endpoints
 
 The idea of this project is run a local server and create 3 seperate endpoints that use POST and GET requests.
@@ -73,8 +78,10 @@ Then we include this in our bash command to make it easier
 curl localhost:8000/add --include --header "Content-Type: application/json" -d @request.json --request "POST"
 ```
 
+
+
 ### Thank You for taking the time to look at my project
-I have been wanting to learn Go for back end developent so this project was really enjoyable for me. Regardless of weather you choose to go forward with my interview process I learned a lot from this project and really enjoyed this project. 
+I have been wanting to learn Go for back-end developent so this project was really enjoyable for me. Regardless of weather you choose to go forward with my interview process I learned a lot from this project and really enjoyed this project. 
 
 Thanks, 
 Clay
