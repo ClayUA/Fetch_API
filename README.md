@@ -67,3 +67,8 @@ Then we include this in our bash command to make it easier
 curl localhost:8000/add --include --header "Content-Type: application/json" -d @request.json --request "POST"
 ```
 
+### Thank You for taking the time to look at my project
+I have been wanting to learn Go for back end developent so this project was really emjoyable for me. Regardless of weather you choose to go forward with my interview process I learned a lot from this project and really enjoyed this project. 
+
+Thanks, 
+Clay
