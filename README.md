@@ -34,7 +34,7 @@ Here is an example of a curl command that will request data and activate the /ad
 curl localhost:8000/add --include --header "Content-Type: application/json" -d '{"payer": "DANNON", "points": 300, "timestamp": "2022-10-31T10:00:00Z"}' --request "POST"
 ```
 
-You should run that in a seperate terminal while the server is listening and you should get a 200 response if you have valid data.
+You should run the above code in a seperate terminal while the server is listening and you should get a 200 response if you have valid data.
 The above bash command is how I used this API for every endpoint. It is easier to make a seperate .json file in the root and include the file into the command like this
 
 **`request.json`**
@@ -50,3 +50,4 @@ Then we include this in our bash command to make it easier
 ```bash
 curl localhost:8000/add --include --header "Content-Type: application/json" -d @request.json --request "POST"
 ```
+

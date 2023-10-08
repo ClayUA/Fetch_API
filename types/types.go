@@ -1,10 +1,11 @@
 package types
 
 import (
-	"sync"
 	"time"
 )
 
+// struct for any given transaction
+// times will be read in and compared in strings then converted to time.Time values for sorting purposes
 type Transaction struct {
 	Points     int    `json:"points"`
 	Payer      string `json:"payer"`
@@ -19,11 +20,13 @@ var TransactionHistory []Transaction
 //upated every time the balance is changed
 // this is for quick retrieval when we have a GET requst
 
+// Gloabal map to keep track of Payer Balances so we can always call /balance and get accurate data
 var PayerBalances = make(map[string]int)
 
+// Just a quick way to validate if we can spend the requested points
 var TotalPointsBalance int
-var PointsBalanceMutex sync.Mutex
 
+// I only use this to read in the amount of points on a /spend endpoint
 type SpendRequest struct {
 	Points int `json:"points"`
 }

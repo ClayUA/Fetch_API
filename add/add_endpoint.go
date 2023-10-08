@@ -16,6 +16,8 @@ func AddHandler(c *gin.Context) {
 	Mutex.Lock()
 	defer Mutex.Unlock()
 
+	// we make a temporary struct of type Transaction to map our json data to
+	// if our json is not formatted correctly it will throw a bad request 400 error
 	var RequestData types.Transaction
 	err := c.BindJSON(&RequestData)
 	if err != nil {
@@ -30,7 +32,7 @@ func AddHandler(c *gin.Context) {
 		return
 	}
 	//comparing our time string with the proper UTC RFC339 format
-	//in the time library the function parse uses this 2006 specific date as a format
+	//in the time library the function "parse" uses this specific date as a format
 	// this specific date is considred "YYYY-MM-DDTHH:MM:SSZ" and we compare to make sure we have the exact
 	//same format or we throw an error for improper time format
 	parsed_time, err := time.Parse("2006-01-02T15:04:05Z", RequestData.Timestamp)
@@ -38,9 +40,9 @@ func AddHandler(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, "Incorrect Time Format")
 		return
 	}
-	//after we validate all of our data we now have to store it
-	// we are going to put our parsed time into a time.Time variable so we can sort which transactions came first
-	//we will add our struct full of valid data into a slice
+	// after we validate all of our data we now have to store it
+	// we are going to put our parsed time into a time.Time variable so we can sort which transactions came first when we enter the /spend endpoint
+	// we will add our struct full of valid data into a slice to keep track of our transaction history
 	RequestData.ParsedTime = parsed_time
 	types.TransactionHistory = append(types.TransactionHistory, RequestData)
 
@@ -52,6 +54,7 @@ func AddHandler(c *gin.Context) {
 
 }
 
+// helper function with basic error handling
 func validateJSON(t types.Transaction) error {
 	if t.Points <= 0 {
 		return fmt.Errorf("Invalid Point size. Must be greater than 0")
