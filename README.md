@@ -29,6 +29,8 @@ You can download it here https://golang.org/dl/
 5. You will need to open a seperate terminal to use curl commands
 
 ### Using the Add endpoint
+
+
 Here is an example of a curl command that will activate the /add endpoint 
 
 ```bash
@@ -36,6 +38,8 @@ curl localhost:8000/add --include --header "Content-Type: application/json" -d '
 ```
 
 ### Using the Balance endpoint
+
+
 Here is an example of a curl command that will request data and activate the /balance endpoint 
 
 ```bash
@@ -44,6 +48,8 @@ curl localhost:8000/balance
 This makes a GET request and returns the Payer and their associated balance from our local data structure
 
 ### Using the Spend endpoint
+
+
 Here is an example of a curl command that will activate the /spend endpoint 
 
 ```bash
@@ -68,7 +74,7 @@ curl localhost:8000/add --include --header "Content-Type: application/json" -d @
 ```
 
 ### Thank You for taking the time to look at my project
-I have been wanting to learn Go for back end developent so this project was really emjoyable for me. Regardless of weather you choose to go forward with my interview process I learned a lot from this project and really enjoyed this project. 
+I have been wanting to learn Go for back end developent so this project was really enjoyable for me. Regardless of weather you choose to go forward with my interview process I learned a lot from this project and really enjoyed this project. 
 
 Thanks, 
 Clay
