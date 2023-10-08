@@ -1,10 +1,10 @@
-```html
+
 <div align=center>
 
 # Fetch API Intern Project 
 
 </div>
-```
+
 
 Hello my name is Clay Truelove from the University of Alabama and I made this application as a part
 of the take home assignment from Fetch Rewards
