@@ -28,6 +28,9 @@ I decided to use a map to store my reciept data after a /spend endpoint. This me
 The problem with my implementation is that the map is a local variable and does not store the payer receipts. I was a bit concerned using too many 
 global variables so I played it safe.
 
+This API needs unit tests but I could not implement solid and rigorous unit testing in the 48 hour window. If I had more time I would have implemented 
+test files for each endpoint.
+
 
 
 
