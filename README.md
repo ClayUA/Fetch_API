@@ -48,6 +48,10 @@ Here is an example of a curl command that will activate the /spend endpoint
 
 ```bash
 curl localhost:8000/spend --include --header "Content-Type: application/json" -d '{"points": 300}' --request "POST"
+```
+
+I find it easier to store the JSON data in a seperate .json file and include it in the body of the request.
+Here is an example of a .json file and a command you can run that uses the .json file in the body
 
 **`request.json`**
 ```json
