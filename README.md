@@ -25,17 +25,29 @@ You can download it here https://golang.org/dl/
 1. Clone the repository and go to the root Directory called 'Fetch_API' 
 2. Run the command ```bash go build```
 3. This will create a binary file called 'Fetch_API' and place it in the root of the project
-4. Run the command ```bash run build``` and this will run the project. You should see 'Listening and serving http on :8000'
+4. Run the command ```bash go run Fetch_API``` and this will run the project. You should see 'Listening and serving http on :8000'
 5. You will need to open a seperate terminal to use curl commands
 
-Here is an example of a curl command that will request data and activate the /add endpoint 
+### Using the Add endpoint
+Here is an example of a curl command that will activate the /add endpoint 
 
 ```bash
 curl localhost:8000/add --include --header "Content-Type: application/json" -d '{"payer": "DANNON", "points": 300, "timestamp": "2022-10-31T10:00:00Z"}' --request "POST"
 ```
 
-You should run the above code in a seperate terminal while the server is listening and you should get a 200 response if you have valid data.
-The above bash command is how I used this API for every endpoint. It is easier to make a seperate .json file in the root and include the file into the command like this
+### Using the Balance endpoint
+Here is an example of a curl command that will request data and activate the /balance endpoint 
+
+```bash
+curl localhost:8000/balance
+```
+This makes a GET request and returns the Payer and their associated balance from our local data structure
+
+### Using the Spend endpoint
+Here is an example of a curl command that will activate the /spend endpoint 
+
+```bash
+curl localhost:8000/spend --include --header "Content-Type: application/json" -d '{"points": 300}' --request "POST"
 
 **`request.json`**
 ```json
