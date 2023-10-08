@@ -32,7 +32,7 @@ You can download it here https://golang.org/dl/
 <br>
 
 Here is an example of a curl command that will activate the /add endpoint 
-
+<br><br>
 ```bash
 curl localhost:8000/add --include --header "Content-Type: application/json" -d '{"payer": "DANNON", "points": 300, "timestamp": "2022-10-31T10:00:00Z"}' --request "POST"
 ```
@@ -41,9 +41,9 @@ curl localhost:8000/add --include --header "Content-Type: application/json" -d '
 <br>
 
 Here is an example of a curl command that will request data and activate the /balance endpoint 
-
+<br><br>
 ```bash
-curl localhost:8000/balance
+curl localhost:8000/balance 
 ```
 This makes a GET request and returns the Payer and their associated balance from our local data structure
 
@@ -51,7 +51,7 @@ This makes a GET request and returns the Payer and their associated balance from
 <br>
 
 Here is an example of a curl command that will activate the /spend endpoint 
-
+<br><br>
 ```bash
 curl localhost:8000/spend --include --header "Content-Type: application/json" -d '{"points": 300}' --request "POST"
 ```
