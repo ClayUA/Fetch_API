@@ -42,6 +42,7 @@ You can download it here https://golang.org/dl/
  go run Fetch_API
 ``` 
 and this will run the project. You should see 'Listening and serving http on :8000'
+<br>
 5. You will need to open a seperate terminal to use curl commands
 
 ### Using the Add endpoint
