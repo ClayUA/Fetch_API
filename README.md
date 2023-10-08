@@ -11,7 +11,11 @@ of the take home assignment from Fetch Rewards
 
 ## go.mod and go.sum
 These two files have any dependencies that you will need. If you do not have the proper packages or dependencies you can go to the root directory
-and use ```bash go mod download``` this should install everything you need to properly run this project
+and use
+ ```bash
+ go mod download
+ ``` 
+ this should install everything you need to properly run this project
 <br>
 
 ## Endpoints
