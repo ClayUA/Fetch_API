@@ -35,4 +35,18 @@ curl localhost:8000/add --include --header "Content-Type: application/json" -d '
 ```
 
 You should run that in a seperate terminal while the server is listening and you should get a 200 response if you have valid data.
+The above bash command is how I used this API for every endpoint. It is easier to make a seperate .json file in the root and include the file into the command like this
 
+**`request.json`**
+```json
+{
+"payer" : "DANNON",
+"points" : 5000,
+"timestamp" : "2020-11-02T14:00:00Z"
+}
+```
+Then we include this in our bash command to make it easier
+
+```bash
+curl localhost:8000/add --include --header "Content-Type: application/json" -d @request.json --request "POST"
+```
