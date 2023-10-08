@@ -23,9 +23,9 @@ You can download it here https://golang.org/dl/
 ### Basic Steps to run this project
 
 1. Clone the repository and go to the root Directory called 'Fetch_API' 
-2. Run the command 'go build'
+2. Run the command ```go go build```
 3. This will create a binary file called 'Fetch_API' and place it in the root of the project
-4. Run the command 'run build' and this will run the project. You should see 'Listening and serving http on :8000'
+4. Run the command ```go run build``` and this will run the project. You should see 'Listening and serving http on :8000'
 5. You will need to open a seperate terminal to use curl commands
 
 Here is an example of a curl command that will request data and activate the /add endpoint 
