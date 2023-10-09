@@ -93,7 +93,7 @@ curl localhost:8000/add --include --header "Content-Type: application/json" -d @
 
 
 ### Thank You for taking the time to look at my project
-I have been wanting to learn Go for back-end developent so this project was really enjoyable for me. Regardless of weather you choose to go forward with my interview process I learned a lot from this project and really enjoyed this project. 
+I have been wanting to learn Go for back-end developent so this project was really enjoyable for me. Regardless of whether you choose to go forward with my interview process I learned a lot from this project and really enjoyed this project. 
 
 Thanks, 
 Clay
