@@ -6,10 +6,6 @@
 </div>
 
 
-
-## go.mod and go.sum
-
-
 ## Endpoints
 
 The idea of this project is run a local server and create 3 seperate endpoints that use POST and GET requests.
