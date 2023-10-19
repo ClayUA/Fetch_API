@@ -1,13 +1,11 @@
 
 <div align=center>
 
-# Fetch API Intern Project 
+# Fetch API 
 
 </div>
 
 
-Hello my name is Clay Truelove from the University of Alabama and I made this application as a part
-of the take home assignment from Fetch Rewards
 
 ## go.mod and go.sum
 These two files have any dependencies that you will need. If you do not have the proper packages or dependencies you can go to the root directory
@@ -92,8 +90,4 @@ curl localhost:8000/add --include --header "Content-Type: application/json" -d @
 
 
 
-### Thank You for taking the time to look at my project
-I have been wanting to learn Go for back-end developent so this project was really enjoyable for me. Regardless of whether you choose to go forward with my interview process I learned a lot from this project and really enjoyed this project. 
 
-Thanks, 
-Clay
