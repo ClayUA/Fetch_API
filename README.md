@@ -8,13 +8,7 @@
 
 
 ## go.mod and go.sum
-These two files have any dependencies that you will need. If you do not have the proper packages or dependencies you can go to the root directory
-and use
- ```bash
- go mod download
- ``` 
- this should install everything you need to properly run this project
-<br>
+
 
 ## Endpoints
 
@@ -29,8 +23,15 @@ You can download it here https://golang.org/dl/
 
 ### Basic Steps to run this project
 
-1. Clone the repository and go to the root Directory called 'Fetch_API' 
-2. Run the command 
+1. Clone the repository and go to the root Directory called 'Fetch_API'
+2. You need to have go mod and go sum files in your folder. These two files have any dependencies that you will need. If you do not have the proper packages or dependencies you can go to the root directory
+and use
+ ```bash
+ go mod download
+ ``` 
+ this should install everything you need to properly run this project
+<br>
+3. Run the command 
 ```bash
  go build
  ```
